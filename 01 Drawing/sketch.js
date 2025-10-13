@@ -33,7 +33,7 @@ function drawScene() {
   let size5 = random(80, 150);
   let col5 = color(random(255), random(255), random(255), 150);
 
-  // === SHAPES ===
+  // shapes and random attributes 
   fill(col1);
   ellipse(x1, y1, size1);
 
