@@ -8,7 +8,7 @@ function setup() {
 function draw() {
   background(0); 
 
-  // draw one random shape
+  //shape
   fill(random(255), random(255), random(255));
   let x = random(width);
   let y = random(height);
@@ -22,8 +22,8 @@ function draw() {
     triangle(x, y - size / 2, x - size / 2, y + size / 2, x + size / 2, y + size / 2);
   }
 
-  // show one random word
+  // word
   fill(255);
-  let wordList = ['move', 'shift', 'bounce', 'go', 'rush'];
+  let wordList = ['move', 'shift', 'bounce', 'go', 'rush', 'fast' ];
   text(random(wordList), random(width), random(height));
 }
