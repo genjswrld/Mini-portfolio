@@ -1,25 +1,36 @@
-let select = 0;
-let rgb = [255, 0, 0];
+/* 
+Playing with mouse events: 
+See https://p5js.org/reference/#/p5/mouseClicked 
+*/
+
+let select = 0; // Color of the shape
+let size = 30; // Size of the shape
+let rgba = [20, 20, 20, 20]; 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  noStroke(); 
+  createCanvas(800, 800);
 }
 
 function draw() {
-  if(select==0){
-    rgb = [255, 0, 0];
-  }else{
-    rgb = [0, 255, 0];
+  fill(rgba);
+  rect(mouseX, mouseY, size, size);
+  if(select!=2){
+    size = random(10, 200);
   }
-  fill(rgb);
-  ellipse(mouseX, mouseY, 30);
 }
 
 function mouseClicked() {
-  if(select==0){
-    select=1;
-  }else{
-    select=0;
+  console.log('select: '+select); 
+   
+  
+  rgba[select] = random(0,255); // Set r, g, or b 
+  rgba[3] = random(5,50); // Set alpha (transparency) 
+  select++; // Increment select by 1
+ 
+  if(select >= 3){ // if select is greater or equal to...
+    console.log('reset select'); 
+    select = 0; 
   }
-  return false;
+  return false; // mouseClicked expects this
 }
