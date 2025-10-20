@@ -1,32 +1,29 @@
-let x = 0; 
-let y = 0; 
-let lines = 0; 
-
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
- 
-function draw() {
-  // background(255,0,100); 
-  
-  // Draw a line 
-  let x1 = random(width);  
-  let y1 = random(height); 
-  // let x1 = mouseX; 
-  // let x1 = mouseX; 
-  let x2 = random(width);
-  let y2 = random(height);
-  let color = random(100, 255);
-  stroke(color);
-  line(x1, y1, x2, y2); 
-  // fill(255, 255, 255, 20); // Sets transparency 
-  // ellipse(x1, y1, x2, y2); // Random  sized shape 
-  
-  // Write some text 
-  let myText = "my words, my text "+lines; 
-  fill(0);
-  textSize(width/20);
+  createCanvas(400, 400);
   textAlign(CENTER, CENTER);
-  text(myText, width/2, height/2);
-  lines++;
+  textSize(32);
+  noStroke();
+}
+
+function draw() {
+  background(0); 
+
+  // draw one random shape
+  fill(random(255), random(255), random(255));
+  let x = random(width);
+  let y = random(height);
+  let size = random(50, 150);
+
+  if (random(1) < 0.33) {
+    ellipse(x, y, size, size);
+  } else if (random(1) < 0.66) {
+    rect(x, y, size, size);
+  } else {
+    triangle(x, y - size / 2, x - size / 2, y + size / 2, x + size / 2, y + size / 2);
+  }
+
+  // show one random word
+  fill(255);
+  let wordList = ['move', 'shift', 'bounce', 'go', 'rush'];
+  text(random(wordList), random(width), random(height));
 }
