@@ -1,13 +1,25 @@
+let select = 0;
+let rgb = [255, 0, 0];
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  background(220);
-  circle(50, 50, 50);
-  circle(50, 60, 50);
-  circle(50, 70, 50);
+  if(select==0){
+    rgb = [255, 0, 0];
+  }else{
+    rgb = [0, 255, 0];
+  }
+  fill(rgb);
+  ellipse(mouseX, mouseY, 30);
 }
-  for(let i=0; i<=100; i++){
-	circle(i, i, 30);
+
+function mouseClicked() {
+  if(select==0){
+    select=1;
+  }else{
+    select=0;
+  }
+  return false;
 }
