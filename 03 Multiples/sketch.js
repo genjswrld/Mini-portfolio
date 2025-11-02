@@ -5,7 +5,7 @@ let unsent = true; // true = bubbles appear green, false = bubbles appear blue
 function setup() {
   createCanvas(400, 500);
   rectMode(CENTER);
-  textSize(14);
+  
 }
 
 function draw() {
