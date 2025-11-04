@@ -21,8 +21,8 @@ function draw() {
     }
 
     
-    if (i % 2 == 0) {
-      rect(120, bubbleY[i], 170, 40, 12);
+    if (i % 2 == 0) { // as the indexes for the array are either even or odd, the modulous result will either be a whole number(if the index is odd) or 0 as 2 goes wholly into even numbers
+      rect(120, bubbleY[i], 170, 40, 12); 
     } else {
       rect(280, bubbleY[i], 170, 40, 12);
     }
