@@ -1,4 +1,4 @@
-let bubbleY = [300, 350, 400, 450, 500]; // vertical positions of the bubbles
+let bubbleY = [300, 350, 400, 450, 500]; 
 
 let unsent = true; // true = bubbles appear green, false = bubbles appear blue
 
@@ -20,7 +20,7 @@ function draw() {
       fill(60, 140, 230); // blue = sent
     }
 
-    // right and left
+    
     if (i % 2 == 0) {
       rect(120, bubbleY[i], 170, 40, 12);
     } else {
