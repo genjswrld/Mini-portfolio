@@ -1,2 +1,4 @@
-I used an array to store several short thoughts that relate to derealisation. After every mouse click a new phrase using random() appears, representing how thoughts shift suddenly when experiencing detachment.
+By this point, I’ve started to realise that the themes I want to make present in my work revolve around mental health, and the irony of how social media and technology can actually worsen it; hence using code to express it. The mouse click interaction represents the cycle of feeding ourselves content, almost like second nature, repeating the habit without awareness.
+
+I used an array to store several short thoughts that relate to derealisation. After every mouse click, a new phrase using 'random()' appears, representing how thoughts shift suddenly when experiencing detachment, the blurry background image too is to articulate this 'out of body' experience. Originally, I had larger ambitions to  do something similar to project 03, but instead of text messages, it was other vagu,e unfocused images; however, I think that would've overcrowded the canvas and the feeling I want to convey is that eerie isolation. 
 
